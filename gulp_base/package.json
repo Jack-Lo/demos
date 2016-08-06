@@ -1,0 +1,21 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "a test project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "rimraf dist && gulp build",
+    "test": "node ./build/test.js"
+  },
+  "author": "jack lo",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-ftp": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-swig": "^0.8.0",
+    "gulp-util": "^3.0.7"
+  }
+}

@@ -1,7 +1,7 @@
 {
-  "name": "webpack_base",
+  "name": "gulp-webpack_base",
   "version": "1.0.0",
-  "description": "a webpack-base project",
+  "description": "a gulp-webpack-base project",
   "main": "index.js",
   "scripts": {
     "test": "test ./build/test.js"
@@ -9,16 +9,24 @@
   "author": "jack lo",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.14.0",
     "css-loader": "^0.23.1",
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.7",
     "html-webpack-plugin": "^2.22.0",
     "node-sass": "^3.8.0",
+    "proxy-middleware": "^0.15.0",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "swig-loader": "^1.0.0",
-    "webpack": "^1.13.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-middleware": "^1.6.1",
     "webpack-dev-server": "^1.14.1",
     "webpack-hot-middleware": "^2.12.2"
+  },
+  "dependencies": {
+    "reqwest": "^2.0.5"
   }
 }

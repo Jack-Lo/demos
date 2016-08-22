@@ -8,7 +8,7 @@ var app = express()
 
 for (var key in config.entry) {
   var entry = config.entry[key]
-  entry.unshift('webpack-hot-middleware/client?reload=true')
+  entry.unshift('./client.js')
 }
 
 // config.plugins.push(new webpack.HotModuleReplacementPlugin())
@@ -25,9 +25,7 @@ var devMiddleware = webpackDevMiddleware(compiler, {
   }
 })
 
-var hotMiddleware = webpackHotMiddleware(compiler, {
-  heartbeat: 100000
-})
+var hotMiddleware = webpackHotMiddleware(compiler)
 
 // hotMiddleware.subscribe(function (reload) {
 //   window.location.reload()
@@ -37,8 +35,8 @@ var hotMiddleware = webpackHotMiddleware(compiler, {
 compiler.plugin('compilation', function(compilation) {
   console.log(233)
   compilation.plugin('html-webpack-plugin-after-emit', function(data, cb) {
-    console.log(hotMiddleware.publish)
-    // hotMiddleware.publish({ action: 'reload' })
+    // console.log(hotMiddleware.publish)
+    hotMiddleware.publish({ action: 'reload' })
     // console.log(hotMiddleware)
     cb()
   })

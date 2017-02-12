@@ -59,7 +59,7 @@ gulp.task('server:init', function () {
   })
 
   app.use('/api/:method', mockMiddleware)
-  app.use(proxy(url.parse('http://tx2.biz.lizhi.fm')))
+  // app.use(proxy(url.parse('http://tx2.biz.lizhi.fm')))
 
   app.use(devMiddleware)
   app.use(hotMiddleware)
